@@ -29,6 +29,9 @@ export default async (req: Request, context: Context) => {
   }
 
   const data = await req.formData();
+
+  console.log({ data });
+
   const name = data.get('name') as string;
   const email = data.get('email') as string;
   const message = data.get('message') as string;
@@ -40,8 +43,12 @@ export default async (req: Request, context: Context) => {
     );
   }
 
+  console.log({ name, email, message });
+
   try {
     await mongoose.connect(process.env.DB_CONN!);
+
+    console.log('Connected to MongoDB');
 
     const contact = new Contact({
       name,
@@ -50,6 +57,8 @@ export default async (req: Request, context: Context) => {
     });
 
     await contact.save();
+
+    console.log('Contact saved');
 
     return new Response(
       JSON.stringify({ message: 'Thanks for contacting me, I will get back to you soon' }),
