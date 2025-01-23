@@ -46,6 +46,8 @@ export default async (req: Request, context: Context) => {
   console.log({ name, email, message });
 
   try {
+
+    console.log(process.env.DB_CONN);
     await mongoose.connect(process.env.DB_CONN!);
 
     console.log('Connected to MongoDB');
@@ -66,7 +68,7 @@ export default async (req: Request, context: Context) => {
     );
   } catch (error) {
     console.log(error);
-    return new Response(JSON.stringify({ message: 'Internal Server Error' }), {
+    return new Response('Internal Server Error', {
       status: 500,
     });
   }
