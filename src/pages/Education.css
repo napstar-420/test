@@ -1,0 +1,44 @@
+.education {
+    padding: 100px 0px;
+    margin: 50px 0px;
+    margin-left: 130px;
+    background-image: url('https://cdn.pixabay.com/photo/2023/03/08/23/21/books-7838952_1280.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .education hr {
+    color: black;
+    width: 400px;
+    margin: 10px auto;
+  }
+  
+  .head {
+    font-weight: bold;
+    color: white;
+    font-size: 45px;
+    text-align: center;
+  }
+  
+  .education .vertical-timeline-element-title {
+    color: #138781;
+  }
+  
+  .education .vertical-timeline-element-subtitle {
+    color: #1e1e2c;
+  } 
+  @media (max-width: 600px) {
+    .education {
+      margin: 0;
+      padding: 0;
+      margin-top: 30px;
+    }
+    .education h2 {
+      padding-top: 20px;
+    }
+    .education hr {
+      width: 280px;
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -1,0 +1,26 @@
+.Home-container {
+    font-family: "Poppins", sans-serif;
+    background-color: black;
+  }
+  
+  .Home-content h1,
+  .Home-content h2 {
+    color: #ffffff;
+  }
+  
+  .Home-content h1 {
+    margin-bottom: 10px;
+  }
+  
+  .Home-content h2 {
+    margin: 10px 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+
+    
